@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'slick'
+    'slick',
+    'bootstrapLightbox'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,6 +30,16 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/conctact', {
+        templateUrl: 'views/conctact.html',
+        controller: 'ConctactCtrl',
+        controllerAs: 'conctact'
+      })
+      .when('/gallery', {
+        templateUrl: 'views/gallery.html',
+        controller: 'GalleryCtrl',
+        controllerAs: 'gallery'
       })
       .otherwise({
         redirectTo: '/'
